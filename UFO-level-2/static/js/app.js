@@ -1,12 +1,12 @@
 // from data.js
 var tableData = data;
+//define a var to hold the filtered data
 var filterObject = {};
 
 // YOUR CODE HERE!
 
 console.log(tableData);
 
-// YOUR CODE HERE!\\
 // Get a reference to the table body
 var tbody = d3.select("tbody");
 function ufoTable(data) {
@@ -21,9 +21,10 @@ function ufoTable(data) {
     });
 });
 }
-////
+////display table
 ufoTable(tableData);
 
+//// function that could filter data based on the criteria
 function inputFilter(){
     var changedElement = d3.select(this).select("input");
     var elementValue = changedElement.property("value");
@@ -39,7 +40,7 @@ function inputFilter(){
     }
     filterTable();
 }
-
+//// calling function for all the selected criteria
 function filterTable(){
 
     Object.entries(filterObject).forEach(([key, value])=>{
@@ -51,5 +52,5 @@ function filterTable(){
 
 }
 
-//  Use D3 `
+/////// filter data as soon as input is in the field
 d3.selectAll(".filter").on("change", inputFilter);
