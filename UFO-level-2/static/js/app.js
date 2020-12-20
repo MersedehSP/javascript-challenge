@@ -42,29 +42,14 @@ function inputFilter(){
 
 function filterTable(){
 
-
- //////////////// Select the  button///////////////////////////////////////////////
-
-
-    
-  
-    
     Object.entries(filterObject).forEach(([key, value])=>{
      var   filteredData = tableData.filter(row => row[key]=== value);
     
-
-    
-    
-  
-
   ufoTable(filteredData);
 
 });    
 
 }
 
-
-
-
-//  Use D3 `.on` to attach a click handler for the button
+//  Use D3 `
 d3.selectAll(".filter").on("change", inputFilter);
