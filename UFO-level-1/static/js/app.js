@@ -32,7 +32,7 @@ button.on("click", function() {
     d3.event.preventDefault();
     tbody.html("");
 
-    // Select the input element and get the raw HTML node
+    // Select the input element 
     var inputElement = d3.select("#datetime");
 
     // Get the value property of the input element
@@ -45,7 +45,7 @@ button.on("click", function() {
 
     console.log(filteredData);
     
-    ///////////////
+    ///////////////display the filtered data
 
   ufoTable(filteredData);
 
